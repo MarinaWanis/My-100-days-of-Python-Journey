@@ -1,6 +1,6 @@
 from replit import clear
 #HINT: You can call clear() to clear the output in the console.
-import Auction_art
+import auction_art
 
 print(art.logo)
 print("Welcome to the Blind Auction")

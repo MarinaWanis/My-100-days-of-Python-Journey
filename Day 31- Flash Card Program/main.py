@@ -6,7 +6,7 @@ import pandas
 BACKGROUND_COLOR = "#B1DDC6"
 
 # -------------------------Read from csv---------------------#
-file_data = pandas.read_csv("/Users/marin/PycharmProjects/Day 31- Flash Card Program/data/french_words.csv")
+file_data = pandas.read_csv("data/french_words.csv")
 know_list = []
 random_row = None
 new_data = {}
@@ -20,9 +20,9 @@ canvas = Canvas(bg=BACKGROUND_COLOR, highlightthickness=0, width=800, height=600
 canvas.grid(column=1, row=1)
 
 front_card_filename = PhotoImage(
-    file="/Users/marin/PycharmProjects/Day 31- Flash Card Program/images/card_front.png")
+    file="images/card_front.png")
 
-back_card_filename = PhotoImage(file="/Users/marin/PycharmProjects/Day 31- Flash Card Program/images/card_back.png")
+back_card_filename = PhotoImage(file="images/card_back.png")
 display_word = Label(text="", font=("Courier", 50, "bold"), bg="white")
 
 front_card = canvas.create_image(400, 260, image=front_card_filename)
@@ -73,12 +73,12 @@ def add_to_know_list():
     new_card()
 
 
-wrong_image_filename = PhotoImage(file="/Users/marin/PycharmProjects/Day 31- Flash Card Program/images/wrong.png")
+wrong_image_filename = PhotoImage(file="images/wrong.png")
 wrong_button = Button(image=wrong_image_filename, highlightthickness=0, bg=BACKGROUND_COLOR, border=0,
                       command=new_card)
 wrong_button.place(x=100, y=525)
 
-right_image_filename = PhotoImage(file="/Users/marin/PycharmProjects/Day 31- Flash Card Program/images/right.png")
+right_image_filename = PhotoImage(file="images/right.png")
 right_button = Button(image=right_image_filename, highlightthickness=0, bg=BACKGROUND_COLOR, border=0,
                       command=add_to_know_list)
 right_button.place(x=600, y=525)

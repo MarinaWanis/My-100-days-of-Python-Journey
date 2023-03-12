@@ -17,19 +17,18 @@ todays_month = todays_date.month
 
 with open("birthdays.csv") as file:
     birthdays = pandas.read_csv(file)
-    dict = {(data["month"],data["day"]): data for (index,data) in birthdays.iterrows() }
-    print(dict)
     # name_list = birthdays.query("month == 3 & day == 11")["name"].to_list()
     # email_list= birthdays.query("month == 3 & day == 11")["email"].to_list()
 
     name_email_dict = birthdays.query(f"month == {todays_month} & day == {todays_day}").get(["name","email"]).to_dict()
 
-#--------------------Check if there are any bithdays today---------------------------------------------
+#--------------------Check if there are any bithdays today----------------------------------------------------------
     if name_email_dict["name"] == {}:
         print("No Birthdays")
     else:
-        # putting all the letter files in a list
+        # putting all the letter files names in a list
         files_list = os.listdir("letter_templates")
+#----------------choosing a random letter from the folder and replacing [Name] with the birthday name---------------
         with open(f"letter_templates/{random.choice(files_list)}", mode="r") as letter_file:
             letter = letter_file.read()
             for index in range(0,len(name_email_dict)+1):
@@ -38,7 +37,7 @@ with open("birthdays.csv") as file:
 
                 customized_letter =letter.replace("[NAME]",f"{name_email_dict['name'][index]}")
 
-                #Send birthday email
+ #---------------------------------------Send birthday email---------------------------------------------------------
                 with smtplib.SMTP("smtp.gmail.com",587) as connection:
                     connection.starttls()
                     connection.login(user=SENDER_EMAIL, password=SENDER_PASSWORD)

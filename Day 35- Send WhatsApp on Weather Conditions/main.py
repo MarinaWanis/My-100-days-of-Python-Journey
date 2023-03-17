@@ -3,7 +3,7 @@ import datetime
 from twilio.rest import Client
 import os
 
-account_sid = os.environ.get("OWM_API_KEY")
+account_sid = os.environ.get("OWM_ACCOUNT_SID")
 auth_token = os.environ.get("OWN_TOKEN")
 client = Client(account_sid, auth_token)
 
@@ -11,7 +11,7 @@ parameters = {
     "lat": 25.0,
     "lon": 55.0,
     "exclude": "current,minutely,daily,alerts",
-    "appid": "69f04e4613056b159c2761a9d9e664d2"
+    "appid": os.environ.get("OWM_API_KEY")
 }
 
 weather_data= {}

@@ -41,8 +41,8 @@ for time in range(0,12):
 if min([x["id"] for x in weather_data.values()]) < 700:
     message = client.messages.create(
         body='It will rain today. Bring an umbrella',
-        from_='whatsapp:+14155238886',
-        to='whatsapp:+971508964120'
+        from_='whatsapp:***************',
+        to='whatsapp:***************'
     )
 else:
     message = client.messages.create(

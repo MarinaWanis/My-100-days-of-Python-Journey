@@ -1,9 +1,10 @@
 #This class is responsible for structuring the flight data into Google sheets.
 import requests
+import os
 
 class FlightData:
     def __init__(self, object_id, code, lowest_price ):
-        edit_sheety_endpoint = f"https://api.sheety.co/539d02384dbdfa979ec8d677e3ec7a66/flightDeals/prices/{object_id}"
+        edit_sheety_endpoint = f"https://api.sheety.co/f'{os.environ["SHEET_ID"]'/flightDeals/prices/{object_id}"
         edit_row = {
             "price": {
                 "iataCode": code,

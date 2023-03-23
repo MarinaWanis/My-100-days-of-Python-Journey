@@ -4,7 +4,7 @@ import os
 
 class FlightData:
     def __init__(self, object_id, code, lowest_price ):
-        edit_sheety_endpoint = f"https://api.sheety.co/f'{os.environ["SHEET_ID"]'/flightDeals/prices/{object_id}"
+        edit_sheety_endpoint = f"https://api.sheety.co/{os.environ['SHEET_ID']}/flightDeals/prices/{object_id}"
         edit_row = {
             "price": {
                 "iataCode": code,

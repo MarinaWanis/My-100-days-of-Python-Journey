@@ -11,7 +11,7 @@ class FlightData:
             }
         }
         header = {
-            "Authorization": "Basic TWFyaW5hOkphVGIqQjApNVB4Uk4="
+            "Authorization": os.envrion["SHEETY_AUTH"]
         }
         edit_sheety_response = requests.put(url=edit_sheety_endpoint, headers=header, json= edit_row)
         edit_sheety_response.text

@@ -1,8 +1,9 @@
 import requests
+import os
 
 TEQUILA_ENDPOINT = "https://api.tequila.kiwi.com"
 TEQUILA_HEADER = {
-    "apikey": "hZRR3BfXdraWXGISmB8HK_SMJJ0YRJWF"
+    "apikey": os.environ['TEQUILA_ID']
 }
 
 # This class searches for the chepeast flight price using Tequila Flight Search API

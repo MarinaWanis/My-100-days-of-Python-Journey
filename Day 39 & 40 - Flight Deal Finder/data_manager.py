@@ -1,14 +1,15 @@
 #This class is responsible for talking to the Google Sheet.
 import requests
+import os
 
-sheety_endpoint = "https://api.sheety.co/539d02384dbdfa979ec8d677e3ec7a66/flightDeals"
+sheety_endpoint = f"https://api.sheety.co/{os.environ['SHEET_ID']}/flightDeals"
 
 prices_sheet_endpoint=f"{sheety_endpoint}/prices"
 
 user_sheet_endpoint= f"{sheety_endpoint}/users"
 
 HEADER = {
-    "Authorization": "Basic TWFyaW5hOkphVGIqQjApNVB4Uk4="
+    "Authorization": os.envrion["SHEETY_AUTH"]
 }
 
 class DataManager:

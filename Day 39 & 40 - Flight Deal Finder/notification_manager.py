@@ -1,21 +1,22 @@
 from twilio.rest import Client
 import smtplib
+import os
 
-sender_email= "marinacoding868@gmail.com"
-sender_passowrd = "exzptbbyhkeaxmpt"
+sender_email= os.environ['SENDER_EMAIL']
+sender_passowrd = os.environ['SENDER_PASSWORD']
 
 class NotificationManager:
     def __init__(self, text):
         # Find your Account SID and Auth Token at twilio.com/console
         # and set the environment variables. See http://twil.io/secure
-        account_sid = "AC9c9da3a062b68035d62897b91f2a43cd"
-        auth_token = "cbef068d444920a4ce6c58a27ec246f4"
+        account_sid = os.environ["ACCOUNT_SID"]
+        auth_token = os.environ["AUTH_TOKEN"]
         client = Client(account_sid, auth_token)
 
         message = client.messages.create(
-            from_='whatsapp:+14155238886',
+            from_='whatsapp:*************',
             body=text,
-            to='whatsapp:+971508964120'
+            to='whatsapp:*************'
         )
         print(message.status)
 

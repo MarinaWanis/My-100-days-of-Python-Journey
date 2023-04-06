@@ -1,0 +1,200 @@
+
+    body {
+        background-color: #00005C;
+        margin:0px;
+        text-align:center;
+
+    }
+    hr {
+        border-style: dotted none none none;
+        border-top-width: thick;
+        width: 10%;
+        color: #9E4784;
+        margin:60px auto 60px auto;
+    }
+    .title{
+        color: #D27685;
+        font-weight: normal;
+        font-family: 'Nova Round', cursive;
+        margin:0 auto 20px auto;
+        font-size: 2.25rem
+
+    }
+    h1{
+        color: #19D9FF;
+        font-family: 'Merienda', normal;
+        font-size:3.25rem;
+    }
+
+    h2{
+        color: #D27685;
+        font-weight: bold;
+        font-family: 'Nova Round', cursive;
+        margin:0 auto 20px auto;
+        font-size: 2.25rem
+    }
+     h3{
+        color: white;
+        font-family: 'Nova Round', cursive;
+        font-weight: normal;
+        font-size:1.25rem;
+        text-align:left;
+    }
+
+
+    h4{
+        line-height: 2;
+        font-weight: normal;
+    }
+    .header_topics{
+        text-align:center;
+        color: #00005;
+        font-family: 'Nova Round', cursive;
+        float:right;
+        margin: 10px 30px 0px 10px;
+
+    }
+
+    .white{
+     color: white;
+     margin: 0 auto;
+     font-family: 'Nova Round', cursive;
+
+    }
+
+    .header{
+        background-color:#19D9FF;
+        height:60px;
+        width:100%;
+    }
+
+    .introsection{
+        position: relative;
+        background-color:#314D8B;
+        background-image: linear-gradient(180deg, rgba(150, 209, 199, 1) 0%, rgba(231, 243, 238, 1) 70%, rgba(255, 255, 255, 1) 100%)
+        height: 600px;
+        padding:60px;
+
+    }
+
+    .intro{
+        width:90%;
+        margin: 50px auto 100px auto;
+     }
+
+    .nametitle{
+       position:relative;
+       right:5px;
+       text-align: left;
+       margin: 0px auto 0px auto;
+       padding-top: 80px;
+     }
+
+    .coder{
+
+        width:40%;
+        left:10px;
+        margin: 0px auto 0px auto;
+        float:left;
+        padding-right: 100px;
+     }
+
+    .about{
+        width:50%;
+        margin: 40px auto 100px auto;
+    }
+
+    .my_image{
+        width:30%;
+        float: left;
+        margin:20px;
+    }
+
+    .skills{
+        width:65%;
+        margin: auto;
+    }
+
+    .footer{
+        background-color:#19D9FF;
+        height:30px;
+    }
+
+
+    .icons{
+        padding: 5px;
+        width: 50%;
+    }
+
+
+    .project_titles{
+        color: #D27685;
+        font-family: 'Nova Round', cursive;
+        font-weight: normal;
+        font-size:1.25rem;
+        text-align:left;
+    }
+
+    .each_project_row{
+        width:50%;
+        margin:50px auto;
+        text-align:left;
+         margin: 100px auto 50px auto;
+    }
+
+
+    .project_images_left{
+        width:20%;
+        float:left;
+        margin-right: 20px;
+    }
+
+    .project_images_right{
+        width:20%;
+        float:right;
+        margin-left: 20px;
+
+    }
+    .contact{
+        padding: 20px;
+
+    }
+    .btn {
+      background: #19D9FF;
+      background-image: -webkit-linear-gradient(top, #19D9FF, #314D8B);
+      background-image: -moz-linear-gradient(top, #19D9FF, #314D8B);
+      background-image: -ms-linear-gradient(top, #19D9FF, #314D8B);
+      background-image: -o-linear-gradient(top, #19D9FF, #314D8B);
+      background-image: linear-gradient(to bottom, #19D9FF, #314D8B);
+      -webkit-border-radius: 13;
+      -moz-border-radius: 13;
+      border-radius: 13px;
+      font-family: 'Nova Round', cursive;
+      color: #ffffff;
+      font-size: 18px;
+      padding: 10px 20px 10px 20px;
+      text-decoration: none;
+      display: block;
+      margin: 30px auto 10px auto;
+      width:150px;
+
+    }
+
+    .btn:hover {
+      background: #00cef2;
+      background-image: -webkit-linear-gradient(top, #00cef2, #5478c7);
+      background-image: -moz-linear-gradient(top, #00cef2, #5478c7);
+      background-image: -ms-linear-gradient(top, #00cef2, #5478c7);
+      background-image: -o-linear-gradient(top, #00cef2, #5478c7);
+      background-image: linear-gradient(to bottom, #00cef2, #5478c7);
+      text-decoration: none;
+      }
+
+    .contact_icons{
+        padding: 5px;
+        width: 30px;
+
+    }
+
+
+
